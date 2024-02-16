@@ -6,7 +6,7 @@ server:
 # Logger
 logging.level:
   web: DEBUG
-  '[com.simplilearn.estore]': DEBUG 
+  '[com.simplilearn.foodapp]': DEBUG 
         
 spring:
 # Jackson Settings
@@ -15,7 +15,7 @@ spring:
     
 # Database Settings
   datasource: 
-    url: jdbc:mysql://localhost:3306/ecommerce
+    url: jdbc:mysql://localhost:3306/Food_Ordering
     username: root
     password: MySql
   jpa:

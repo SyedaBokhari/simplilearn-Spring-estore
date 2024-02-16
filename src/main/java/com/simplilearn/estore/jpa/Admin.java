@@ -6,47 +6,45 @@ import java.util.Date;
 
 
 /**
- * The persistent class for the admins database table.
+ * The persistent class for the admin database table.
  * 
  */
 @Entity
-@Table(name="admins")
 @NamedQuery(name="Admin.findAll", query="SELECT a FROM Admin a")
 public class Admin implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int adminId;
+	private int id;
 
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date addedOn;
+	private Date addedon;
 
 	private String email;
 
-	private String fullName;
-
-	private int loginType;
+	private String name;
 
 	private String password;
+
+	private String username;
 
 	public Admin() {
 	}
 
-	public int getAdminId() {
-		return this.adminId;
+	public int getId() {
+		return this.id;
 	}
 
-	public void setAdminId(int adminId) {
-		this.adminId = adminId;
+	public void setId(int id) {
+		this.id = id;
 	}
 
-	public Date getAddedOn() {
-		return this.addedOn;
+	public Date getAddedon() {
+		return this.addedon;
 	}
 
-	public void setAddedOn(Date addedOn) {
-		this.addedOn = addedOn;
+	public void setAddedon(Date addedon) {
+		this.addedon = addedon;
 	}
 
 	public String getEmail() {
@@ -57,20 +55,12 @@ public class Admin implements Serializable {
 		this.email = email;
 	}
 
-	public String getFullName() {
-		return this.fullName;
+	public String getName() {
+		return this.name;
 	}
 
-	public void setFullName(String fullName) {
-		this.fullName = fullName;
-	}
-
-	public int getLoginType() {
-		return this.loginType;
-	}
-
-	public void setLoginType(int loginType) {
-		this.loginType = loginType;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public String getPassword() {
@@ -79,6 +69,14 @@ public class Admin implements Serializable {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public String getUsername() {
+		return this.username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 }
